@@ -2,8 +2,8 @@ package de.nvg.testeasy;
 
 import java.util.Set;
 
-public interface Format {
+public interface Format<T> {
 
-	Set<Project> projects();
+	Set<Project> projects(T content);
 
 }

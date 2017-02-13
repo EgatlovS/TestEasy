@@ -6,7 +6,7 @@ public class ProjectTest {
 
 	@Test
 	public void projectCreationFromJSON() {
-		Projects projects = new Projects(new JSON(new FileStorage("some/path")));
+		Workplace workplace = new Workplace(new FileStorage("some/path", new JSON()));
 	}
 
 }

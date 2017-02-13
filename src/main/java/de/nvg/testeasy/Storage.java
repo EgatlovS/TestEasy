@@ -1,7 +1,9 @@
 package de.nvg.testeasy;
 
-public interface Storage<T> {
+import java.util.Set;
 
-	T content();
+public interface Storage {
+
+	Set<Project> content();
 	
 }
