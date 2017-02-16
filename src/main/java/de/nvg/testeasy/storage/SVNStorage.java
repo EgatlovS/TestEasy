@@ -4,6 +4,19 @@ import de.nvg.testeasy.format.Format;
 import de.nvg.testeasy.format.JSON;
 import de.nvg.testeasy.project.Project;
 
+/**
+ * Connecting to a svn-repository
+ * and checkout the single project-testeasy file and/or
+ * commit a project-testeasy file.
+ * The svn-sparse checkout is required so the svn version
+ * must be 1.5 or higher.
+ * 
+ * Example sparse checkout:
+ * svn checkout --depth empty http://svnserver/trunk/proj
+ * svn update --set-depth infinity proj/foo
+ * 
+ * @author egatlovS
+ */
 public class SVNStorage implements Storage {
 
 	private final Format<String> format;

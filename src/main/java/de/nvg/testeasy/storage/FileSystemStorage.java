@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 import de.nvg.testeasy.format.Format;
 import de.nvg.testeasy.format.JSON;
@@ -23,13 +24,12 @@ public class FileSystemStorage implements Storage {
 		this(Paths.get(url), format);
 	}
 
-	public FileSystemStorage(Path path) {
-		this.path = path;
-		this.format = new JSON();
-	}
-
 	public FileSystemStorage(String url) {
 		this(Paths.get(url));
+	}
+
+	public FileSystemStorage(Path path) {
+		this(path, new JSON());
 	}
 
 	@Override
@@ -38,15 +38,20 @@ public class FileSystemStorage implements Storage {
 		try {
 			bytes = Files.readAllBytes(path);
 		} catch (IOException e) {
-			throw new Exception("Couldn't read file from path: " + path, e);
+			throw new Exception("Couldn't read file from path: " + path.toString(), e);
 		}
 		return format.project(new String(bytes));
 	}
 
 	@Override
-	public void save(Project project) {
-		// TODO save:
-		format.formattedProject(project);
+	public void save(Project project) throws Exception {
+		String content = format.formattedProject(project);
+		try {
+			Files.write(path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.WRITE,
+					StandardOpenOption.TRUNCATE_EXISTING);
+		} catch (IOException e) {
+			throw new Exception("Couldn't save file to path: " + path.toString(), e);
+		}
 	}
 
 }

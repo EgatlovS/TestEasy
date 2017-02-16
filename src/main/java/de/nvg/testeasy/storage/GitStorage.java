@@ -4,6 +4,16 @@ import de.nvg.testeasy.format.Format;
 import de.nvg.testeasy.format.JSON;
 import de.nvg.testeasy.project.Project;
 
+/**
+ * Connecting to a git-remote-repository
+ * and checkout the single project-testeasy file and/or
+ * commit a project-testeasy file.
+ * 
+ * Maybe with git sparse checkout but most likely with
+ * another approach...
+ * 
+ * @author egatlovS
+ */
 public class GitStorage implements Storage {
 
 	private final Format<String> format;
