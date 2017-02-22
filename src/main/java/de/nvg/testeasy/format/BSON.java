@@ -2,7 +2,7 @@ package de.nvg.testeasy.format;
 
 import de.nvg.testeasy.project.Project;
 
-public class BSON implements Format<String>{
+public final class BSON implements Format<String>{
 
 	@Override
 	public Project project(String content) {

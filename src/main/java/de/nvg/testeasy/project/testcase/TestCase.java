@@ -1,11 +1,11 @@
-package de.nvg.testeasy.project;
+package de.nvg.testeasy.project.testcase;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import de.nvg.testeasy.task.Task;
+import de.nvg.testeasy.project.testcase.task.Task;
 
-public class TestCase {
+public final class TestCase {
 
 	private final Set<Task> tasks;
 

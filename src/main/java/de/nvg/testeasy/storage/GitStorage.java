@@ -18,7 +18,7 @@ import de.nvg.testeasy.project.Project;
  * 
  * @author egatlovS
  */
-public class GitStorage implements Storage {
+public final class GitStorage implements Storage {
 
 	private final GitPathConfig config;
 	private final CredentialsProvider credentials;

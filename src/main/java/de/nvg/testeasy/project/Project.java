@@ -3,7 +3,9 @@ package de.nvg.testeasy.project;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Project {
+import de.nvg.testeasy.project.testcase.TestCase;
+
+public final class Project {
 
 	private final Set<TestCase> testCases;
 

@@ -10,7 +10,7 @@ import de.nvg.testeasy.format.Format;
 import de.nvg.testeasy.format.JSON;
 import de.nvg.testeasy.project.Project;
 
-public class FileSystemStorage implements Storage {
+public final class FileSystemStorage implements Storage {
 
 	private final Path path;
 	private final Format<String> format;

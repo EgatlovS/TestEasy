@@ -17,7 +17,7 @@ import de.nvg.testeasy.project.Project;
  * 
  * @author egatlovS
  */
-public class SVNStorage implements Storage {
+public final class SVNStorage implements Storage {
 
 	private final Format<String> format;
 

@@ -1,6 +1,6 @@
 package de.nvg.testeasy.storage;
 
-public class GitPathConfig {
+public final class GitPathConfig {
 
 	private final String remoteRepositoryPath;
 	private final String localRepositoryPath;

@@ -2,7 +2,7 @@ package de.nvg.testeasy.format;
 
 import de.nvg.testeasy.project.Project;
 
-public class XML implements Format<String> {
+public final class XML implements Format<String> {
 
 	@Override
 	public Project project(String content) {
