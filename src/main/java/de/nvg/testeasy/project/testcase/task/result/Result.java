@@ -2,7 +2,7 @@ package de.nvg.testeasy.project.testcase.task.result;
 
 public interface Result {
 
-	boolean positive();
+	boolean isPositive();
 	String content();
 	
 }
