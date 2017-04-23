@@ -2,21 +2,21 @@ package de.nvg.testeasy.project.testcase.task.result;
 
 public class BooleanResult implements Result{
 
-	private final boolean result;
+	private final boolean isPositive;
 	private final String content;
 	
-	public BooleanResult(boolean result, String content){
-		this.result = result;
+	public BooleanResult(boolean isPositive, String content){
+		this.isPositive = isPositive;
 		this.content = content;
 	}
 	
-	public BooleanResult(boolean result){
-		this(result, "The result is positive");
+	public BooleanResult(boolean isPositive){
+		this(isPositive, "The result is " + isPositive);
 	}
 	
 	@Override
-	public boolean positive(){
-		return result;
+	public boolean isPositive(){
+		return isPositive;
 	}
 
 	@Override
