@@ -13,7 +13,7 @@ public class ProjectResource {
 
 	@GET
 	public Response getAll() {
-		return Response.ok().build();
+		return Response.ok("Hello World").build();
 	}
 
 	@Path("/{projectName}")
